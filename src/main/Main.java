@@ -1,9 +1,7 @@
 package main;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.*;
 
 import pages.HomePage;
@@ -14,19 +12,11 @@ import pages.RegistrationPage;
 
 public class Main {
 	WebDriver driver;
-	Actions mouse;
 	String baseUrl = "https://www.naukri.com";
 
-	private LandingPage landingPg = new LandingPage(driver);
-	private RegistrationPage regPg = new RegistrationPage(driver);
-	private LoginPage loginPg = new LoginPage(driver);
-	private HomePage homePg = new HomePage(driver);
-	private ProfilePage profilePg = new ProfilePage(driver);
-	
 	@BeforeClass
 	public void setUp() {
 		driver = new ChromeDriver();
-		mouse = new Actions(driver);
 		driver.manage().window().maximize();
 		driver.get(baseUrl);
 	}
@@ -34,32 +24,38 @@ public class Main {
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000);
-//		driver.close();
-//		driver.quit();
+		driver.close();
+		driver.quit();
+	}
+
+	@BeforeTest
+	public void beforeTest() throws InterruptedException {
+		Thread.sleep(4000);
 	}
 	
 	@Test(priority = 0, groups = "registration")
 	public void registrationRun() throws InterruptedException{
+		LandingPage landingPg = new LandingPage(driver);
 		landingPg.clickOnRegister();
+		RegistrationPage regPg = new RegistrationPage(driver);
 		regPg.fillDetails();
 	}
 	
 	@Test(priority=1, groups="login")
 	public void loginRun() throws InterruptedException {
+		RegistrationPage regPg = new RegistrationPage(driver);
 		regPg.clickOnLogin();
+		LoginPage loginPg = new LoginPage(driver);
 		loginPg.LoginActions();
 	}
 	
 	@Test(priority=2, groups="profile")
-	public void profileRun() {
-		
+	public void profileRun() throws InterruptedException {
+		HomePage homePg = new HomePage(driver);
 		homePg.gotoProfilePage();
-		if(profilePg.chatBot.isDisplayed()) {
-			driver.findElement(By.xpath("//*[@id=\"_15sb4wxs0Navbar\"]/div")).click();
-		}
-		
+		ProfilePage profilePg = new ProfilePage(driver);
 		profilePg.updateEmployment();
-		
+		Thread.sleep(4000);
 	}
 	
 	

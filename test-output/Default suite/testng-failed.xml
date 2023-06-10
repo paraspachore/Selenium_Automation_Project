@@ -5,9 +5,10 @@
     <classes>
       <class name="main.Main">
         <methods>
+          <include name="beforeTest"/>
           <include name="setUp"/>
-          <include name="loginTest"/>
           <include name="tearDown"/>
+          <include name="profileRun"/>
         </methods>
       </class> <!-- main.Main -->
     </classes>
