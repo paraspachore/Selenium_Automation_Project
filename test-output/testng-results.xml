@@ -2,44 +2,48 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-10T22:59:05 IST" name="Default suite" finished-at="2023-06-10T23:00:41 IST" duration-ms="96477">
+  <suite started-at="2023-06-11T16:58:02 IST" name="Default suite" finished-at="2023-06-11T16:59:45 IST" duration-ms="103238">
     <groups>
       <group name="profile">
-        <method signature="Main.profileRun()[pri:2, instance:main.Main@2accdbb5]" name="profileRun" class="main.Main"/>
+        <method signature="Main.profileRun()[pri:2, instance:main.Main@6631f5ca]" name="profileRun" class="main.Main"/>
       </group> <!-- profile -->
       <group name="registration">
-        <method signature="Main.registrationRun()[pri:0, instance:main.Main@2accdbb5]" name="registrationRun" class="main.Main"/>
+        <method signature="Main.registrationRun()[pri:0, instance:main.Main@6631f5ca]" name="registrationRun" class="main.Main"/>
       </group> <!-- registration -->
       <group name="login">
-        <method signature="Main.loginRun()[pri:1, instance:main.Main@2accdbb5]" name="loginRun" class="main.Main"/>
+        <method signature="Main.loginRun()[pri:1, instance:main.Main@6631f5ca]" name="loginRun" class="main.Main"/>
       </group> <!-- login -->
     </groups>
-    <test started-at="2023-06-10T22:59:05 IST" name="Default test" finished-at="2023-06-10T23:00:41 IST" duration-ms="96477">
+    <test started-at="2023-06-11T16:58:02 IST" name="Default test" finished-at="2023-06-11T16:59:45 IST" duration-ms="103238">
       <class name="main.Main">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:main.Main@2accdbb5]" started-at="2023-06-10T22:59:05 IST" name="beforeTest" finished-at="2023-06-10T22:59:09 IST" duration-ms="4018" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-11T16:58:02 IST" name="beforeTest" finished-at="2023-06-11T16:58:06 IST" duration-ms="4022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:main.Main@2accdbb5]" started-at="2023-06-10T22:59:09 IST" name="setUp" finished-at="2023-06-10T22:59:20 IST" duration-ms="10650" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-11T16:58:06 IST" name="setUp" finished-at="2023-06-11T16:58:21 IST" duration-ms="14980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registrationRun()[pri:0, instance:main.Main@2accdbb5]" started-at="2023-06-10T22:59:20 IST" name="registrationRun" finished-at="2023-06-10T22:59:45 IST" duration-ms="25068" status="PASS">
+        <test-method signature="registrationRun()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-11T16:58:21 IST" name="registrationRun" finished-at="2023-06-11T16:58:48 IST" duration-ms="26767" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationRun -->
-        <test-method signature="loginRun()[pri:1, instance:main.Main@2accdbb5]" started-at="2023-06-10T22:59:45 IST" name="loginRun" finished-at="2023-06-10T22:59:54 IST" duration-ms="9266" status="PASS">
+        <test-method signature="loginRun()[pri:1, instance:main.Main@6631f5ca]" started-at="2023-06-11T16:58:48 IST" name="loginRun" finished-at="2023-06-11T16:58:58 IST" duration-ms="9546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginRun -->
-        <test-method signature="profileRun()[pri:2, instance:main.Main@2accdbb5]" started-at="2023-06-10T22:59:54 IST" name="profileRun" finished-at="2023-06-10T23:00:35 IST" duration-ms="41389" status="PASS">
+        <test-method signature="profileRun()[pri:2, instance:main.Main@6631f5ca]" started-at="2023-06-11T16:58:58 IST" name="profileRun" finished-at="2023-06-11T16:59:36 IST" duration-ms="38779" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- profileRun -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:main.Main@2accdbb5]" started-at="2023-06-10T23:00:35 IST" name="tearDown" finished-at="2023-06-10T23:00:41 IST" duration-ms="5967" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-11T16:59:36 IST" name="tearDown" finished-at="2023-06-11T16:59:41 IST" duration-ms="5009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-11T16:59:41 IST" name="afterTest" finished-at="2023-06-11T16:59:45 IST" duration-ms="4007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- main.Main -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

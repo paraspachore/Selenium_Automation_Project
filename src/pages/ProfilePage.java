@@ -3,7 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class ProfilePage {
 	WebDriver driver;
@@ -14,7 +16,7 @@ public class ProfilePage {
 		js = (JavascriptExecutor) driver;
 	}
 	
-//	By chatBot = By.xpath("//*[@id=\"_15sb4wxs0Drawer\"]/div[1]");
+//	By chatBotBy = By.xpath("//*[@id=\"_15sb4wxs0Drawer\"]/div[1]");
 	By EmpSection = By.xpath("//*[@id=\"lazyEmployment\"]/div");
 	By editEmp = By.xpath("//*[@id=\"lazyEmployment\"]/div/div[1]/div/div[2]/div/div[1]/span[2]");
 	By currEmpRadio = By.xpath("//*[@id=\"employmentForm\"]/div[2]/div[3]/label");
@@ -26,10 +28,20 @@ public class ProfilePage {
 	
 	public void updateEmployment() throws InterruptedException {
 		Thread.sleep(5000);
-//		if(driver.findElement(chatBot).isDisplayed()) {
+		try {
+		    WebElement element = driver.findElement(By.xpath("//*[@id='_15sb4wxs0Navbar']/div"));
+		    element.click();
+		} catch (NoSuchElementException e) {
+		    System.out.println("Element not found or not visible");
+		}
+		
+//		WebElement chatBot = driver.findElement(chatBotBy);
+//		if(chatBot.isDisplayed()) {
 //			driver.findElement(By.xpath("//*[@id=\"_15sb4wxs0Navbar\"]/div")).click();
+//		} else {
+//			System.out.println("ChatBot not displayed");
 //		}
-//		Thread.sleep(1500);
+		Thread.sleep(1500);
 		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(EmpSection));
 		Thread.sleep(2000);
 		driver.findElement(editEmp).click();

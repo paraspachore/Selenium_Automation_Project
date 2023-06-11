@@ -9,6 +9,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="profileRun"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- main.Main -->
     </classes>

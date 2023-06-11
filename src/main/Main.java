@@ -13,6 +13,13 @@ import pages.RegistrationPage;
 public class Main {
 	WebDriver driver;
 	String baseUrl = "https://www.naukri.com";
+	
+	
+	LandingPage landingPg;
+	RegistrationPage regPg;
+	LoginPage loginPg;
+	HomePage homePg;
+	ProfilePage profilePg;
 
 	@BeforeClass
 	public void setUp() {
@@ -24,39 +31,47 @@ public class Main {
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000);
-		driver.close();
-		driver.quit();
+//		driver.close();
+//		driver.quit();
 	}
 
 	@BeforeTest
 	public void beforeTest() throws InterruptedException {
 		Thread.sleep(4000);
 	}
+	@AfterTest
+	public void afterTest() throws InterruptedException {
+		Thread.sleep(4000);
+	}
 	
 	@Test(priority = 0, groups = "registration")
 	public void registrationRun() throws InterruptedException{
-		LandingPage landingPg = new LandingPage(driver);
+		landingPg = new LandingPage(driver);
 		landingPg.clickOnRegister();
-		RegistrationPage regPg = new RegistrationPage(driver);
+		regPg = new RegistrationPage(driver);
 		regPg.fillDetails();
 	}
 	
 	@Test(priority=1, groups="login")
 	public void loginRun() throws InterruptedException {
-		RegistrationPage regPg = new RegistrationPage(driver);
+		regPg = new RegistrationPage(driver);
 		regPg.clickOnLogin();
-		LoginPage loginPg = new LoginPage(driver);
+		loginPg = new LoginPage(driver);
 		loginPg.LoginActions();
 	}
 	
 	@Test(priority=2, groups="profile")
 	public void profileRun() throws InterruptedException {
-		HomePage homePg = new HomePage(driver);
+		homePg = new HomePage(driver);
 		homePg.gotoProfilePage();
-		ProfilePage profilePg = new ProfilePage(driver);
+		profilePg = new ProfilePage(driver);
 		profilePg.updateEmployment();
-		Thread.sleep(4000);
 	}
+	
+//	@Test(priority=3, groups="searching")
+//	public void searchRun() {
+//		HomePage homePg = 
+//	}
 	
 	
 	
