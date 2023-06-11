@@ -7,8 +7,8 @@
         <methods>
           <include name="beforeTest"/>
           <include name="setUp"/>
+          <include name="searchRun"/>
           <include name="tearDown"/>
-          <include name="profileRun"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- main.Main -->

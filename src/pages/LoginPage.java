@@ -16,7 +16,6 @@ public class LoginPage {
 		this.driver = driver;
 	}
 	
-	
 	public void LoginActions() throws InterruptedException {
 		Thread.sleep(4000);
 		driver.findElement(unameIn).sendKeys("paraspachore@gmail.com");
