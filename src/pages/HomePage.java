@@ -37,4 +37,5 @@ public class HomePage {
 		searchIn.sendKeys(searchTitle+Keys.ENTER);
 //		searchIn.submit();
 	}
+	
 }

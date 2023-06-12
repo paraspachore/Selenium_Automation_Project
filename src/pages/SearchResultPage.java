@@ -3,6 +3,7 @@ package pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -31,22 +32,27 @@ public class SearchResultPage {
 	
 	void setSlider() {
 		WebElement slider = driver.findElement(expSlider);
-		int sliderWidth = slider.getSize().getWidth();
+		int sliderWidth = slider.getSize().getWidth();;
 		WebElement sliderHandle = driver.findElement(By.cssSelector(".handle"));
-//		int handleWidth = sliderHandle.getSize().getWidth();
-		
 		int xOffset = -sliderWidth;
 		Actions mouse = new Actions(driver);
 		mouse.dragAndDropBy(sliderHandle, xOffset, 0).build().perform();
 	}
 	
 	void setLocation() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(2500);
 		driver.findElement(By.xpath("//*[@id=\"cityTypeGid\"]/span")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"tooltip\"]/div[2]/div[1]/div/div[1]/div[6]/label/i"));
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"tooltip\"]/div[2]/div[2]/div[2]")).click();
+		Thread.sleep(2500);
+		WebElement element = driver.findElement(By.xpath("//*[@class='chkLbl'and@for='chk-Pune-cityTypeGid-expanded']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+//		element.click();
+//		driver.findElement(By.xpath("//*[@id=\"chk-Pune-cityTypeGid-expanded\"]")).click();////*[@class='chkLbl'and@for='chk-Pune-cityTypeGid-expanded']//		WebElement loc = 	driver.findElement(By.xpath("//*[@id=\"tooltip\"]/div[2]/div[1]/div/div[1]/div[5]/label/p/span[1]"));//"//*[@class='chkLbl'and@for='chk-Pune-cityTypeGid-expanded']"));
+//		Actions mouse = new Actions(driver);
+//		mouse.moveToElement(loc).click();;
+		Thread.sleep(3000);
+//		driver.findElement(By.xpath("//*[@id=\"tooltip\"]/div[2]/div[2]/div[2]")).click();
+		driver.findElement(By.cssSelector("div.filter-apply-btn")).click();
+		
 	}
 	
 	public void apply(String desiredJob) throws InterruptedException {
@@ -54,11 +60,21 @@ public class SearchResultPage {
 		List<WebElement> jobTitles = driver.findElements(JobTitleBy);
 		
 		for(int i=0; i<3; i++) {
-			if ((jobTitles.get(i).getText()).contains(desiredJob)) {
 				applyForIt(jobTitles.get(i));
 		    	Thread.sleep(4000);
-			}
 		}
+		
+		
+//		for(int i=0; i<3; i++) {
+//			WebElement jobTitle = jobTitles.get(i);
+//			String titleString = jobTitle.getText();
+//			if (titleString.contains(desiredJob)) {
+//				applyForIt(jobTitles.get(i));
+//		    	Thread.sleep(4000);
+//			} else {
+//				i--;
+//			}
+//		}
 		
 //		for (WebElement jobTitle : jobTitles) {
 //			String jobTitleName = jobTitle.getText();

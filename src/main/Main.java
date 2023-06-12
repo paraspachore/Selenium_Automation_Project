@@ -79,7 +79,7 @@ public class Main {
 		Thread.sleep(4000);
 		srchRsltPg = new SearchResultPage(driver);
 		srchRsltPg.filterResults();
-		srchRsltPg.apply(applyForRole);
+		srchRsltPg.apply("Tester");
 	}
 	
 	@Test(priority = 0)
