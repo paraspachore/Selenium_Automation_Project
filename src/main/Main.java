@@ -13,7 +13,8 @@ import pages.SearchResultPage;
 
 public class Main {
 	WebDriver driver;
-	String baseUrl = "https://www.naukri.com/nlogin/login";//"https://www.naukri.com";
+//	String baseUrl = "https://www.naukri.com/nlogin/login";//"https://www.naukri.com";
+	String baseUrl = "https://www.naukri.com";
 	
 	
 	LandingPage landingPg;
@@ -61,7 +62,7 @@ public class Main {
 //		loginPg = new LoginPage(driver);
 //		loginPg.LoginActions();
 //	}
-	
+//	
 //	@Test(priority=2, groups="profile")
 //	public void profileRun() throws InterruptedException {
 //		homePg = new HomePage(driver);
@@ -70,19 +71,20 @@ public class Main {
 //		profilePg.updateEmployment();
 //	}
 	
-	@Test(priority=2, groups="searching")
+	@Test(priority=3, groups="searching")
 	public void searchRun() throws InterruptedException {
 		String applyForRole = "Automation Test";
 		homePg = new HomePage(driver);
 		homePg.search(applyForRole);
 		Thread.sleep(4000);
 		srchRsltPg = new SearchResultPage(driver);
+		srchRsltPg.filterResults();
 		srchRsltPg.apply(applyForRole);
 	}
 	
 	@Test(priority = 0)
 	public void temp() throws InterruptedException {
-//		driver.navigate().to("https://www.naukri.com/nlogin/login");
+		driver.navigate().to("https://www.naukri.com/nlogin/login");
 		loginPg = new LoginPage(driver);
 		loginPg.LoginActions();
 	}
