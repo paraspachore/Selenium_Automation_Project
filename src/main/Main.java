@@ -48,29 +48,29 @@ public class Main {
 		Thread.sleep(4000);
 	}
 	
-//	@Test(priority = 0, groups = "registration")
-//	public void registrationRun() throws InterruptedException{
-//		landingPg = new LandingPage(driver);
-//		landingPg.clickOnRegister();
-//		regPg = new RegistrationPage(driver);
-//		regPg.fillDetails();
-//	}
-//	
-//	@Test(priority=1, groups="login")
-//	public void loginRun() throws InterruptedException {
-//		regPg = new RegistrationPage(driver);
-//		regPg.clickOnLogin();
-//		loginPg = new LoginPage(driver);
-//		loginPg.LoginActions();
-//	}
-//	
-//	@Test(priority=2, groups="profile")
-//	public void profileRun() throws InterruptedException {
-//		homePg = new HomePage(driver);
-//		homePg.gotoProfilePage();
-//		profilePg = new ProfilePage(driver);
-//		profilePg.updateEmployment();
-//	}
+	@Test(priority = 0, groups = "registration")
+	public void registrationRun() throws InterruptedException{
+		landingPg = new LandingPage(driver);
+		landingPg.clickOnRegister();
+		regPg = new RegistrationPage(driver);
+		regPg.fillDetails();
+	}
+	
+	@Test(priority=1, groups="login")
+	public void loginRun() throws InterruptedException {
+		regPg = new RegistrationPage(driver);
+		regPg.clickOnLogin();
+		loginPg = new LoginPage(driver);
+		loginPg.LoginActions();
+	}
+	
+	@Test(priority=2, groups="profile")
+	public void profileRun() throws InterruptedException {
+		homePg = new HomePage(driver);
+		homePg.gotoProfilePage();
+		profilePg = new ProfilePage(driver);
+		profilePg.updateEmployment();
+	}
 
 	@Test(priority=3, groups="searching")
 	public void searchRun() throws InterruptedException {
@@ -83,32 +83,32 @@ public class Main {
 		srchRsltPg.apply();
 	}
 	
-//	@Test(priority=4, groups="savedjobs")
-//	public void savedJobs() throws InterruptedException {
-//		homePg = new HomePage(driver);
-//		homePg.goToSavedJobs();
-//	}
-//	
-//	@Test(priority=5, groups="Companies")
-//	public void companies() throws InterruptedException {
-//		homePg = new HomePage(driver);
-//		homePg.goToCompanies();
-//		companiesPg = new CompaniesPage(driver);
-//		companiesPg.findMNCs();
-//	}
-//	@Test(priority=6, groups="Logout")
-//	public void logout() throws InterruptedException {
-//		homePg = new HomePage(driver);
-//		homePg.logout();
-//	}
-	
-	
-	
-	@Test(priority = 0)
-	public void temp() throws InterruptedException {
-		driver.navigate().to("https://www.naukri.com/nlogin/login");
-		loginPg = new LoginPage(driver);
-		loginPg.LoginActions();
+	@Test(priority=4, groups="savedjobs")
+	public void savedJobs() throws InterruptedException {
+		homePg = new HomePage(driver);
+		homePg.goToSavedJobs();
 	}
+	
+	@Test(priority=5, groups="Companies")
+	public void companies() throws InterruptedException {
+		homePg = new HomePage(driver);
+		homePg.goToCompanies();
+		companiesPg = new CompaniesPage(driver);
+		companiesPg.findMNCs();
+	}
+	@Test(priority=6, groups="Logout")
+	public void logout() throws InterruptedException {
+		homePg = new HomePage(driver);
+		homePg.logout();
+	}
+	
+	
+	
+//	@Test(priority = 0)
+//	public void temp() throws InterruptedException {
+//		driver.navigate().to("https://www.naukri.com/nlogin/login");
+//		loginPg = new LoginPage(driver);
+//		loginPg.LoginActions();
+//	}
 	
 }
