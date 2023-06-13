@@ -48,7 +48,7 @@ public class SearchResultPage {
 //		element.click();
 //		driver.findElement(By.xpath("//*[@id=\"chk-Pune-cityTypeGid-expanded\"]")).click();////*[@class='chkLbl'and@for='chk-Pune-cityTypeGid-expanded']//		WebElement loc = 	driver.findElement(By.xpath("//*[@id=\"tooltip\"]/div[2]/div[1]/div/div[1]/div[5]/label/p/span[1]"));//"//*[@class='chkLbl'and@for='chk-Pune-cityTypeGid-expanded']"));
 //		Actions mouse = new Actions(driver);
-//		mouse.moveToElement(loc).click();;
+//		mouse.moveToElement(loc).click().perform();
 		Thread.sleep(3000);
 //		driver.findElement(By.xpath("//*[@id=\"tooltip\"]/div[2]/div[2]/div[2]")).click();
 		driver.findElement(By.cssSelector("div.filter-apply-btn")).click();

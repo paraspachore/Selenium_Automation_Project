@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
+import pages.CompaniesPage;
 import pages.HomePage;
 import pages.LandingPage;
 import pages.LoginPage;
@@ -23,6 +24,7 @@ public class Main {
 	HomePage homePg;
 	ProfilePage profilePg;
 	SearchResultPage srchRsltPg;
+	CompaniesPage companiesPg;
 
 	@BeforeClass
 	public void setUp() {
@@ -71,16 +73,36 @@ public class Main {
 //		profilePg.updateEmployment();
 //	}
 	
-	@Test(priority=3, groups="searching")
-	public void searchRun() throws InterruptedException {
-		String applyForRole = "Automation Test";
+//	@Test(priority=3, groups="searching")
+//	public void searchRun() throws InterruptedException {
+//		String applyForRole = "Automation Test";
+//		homePg = new HomePage(driver);
+//		homePg.search(applyForRole);
+//		Thread.sleep(4000);
+//		srchRsltPg = new SearchResultPage(driver);
+//		srchRsltPg.filterResults();
+//		srchRsltPg.apply("Tester");
+//	}
+	
+//	@Test(priority=4, groups="savedjobs")
+//	public void savedJobs() throws InterruptedException {
+//		homePg = new HomePage(driver);
+//		homePg.goToSavedJobs();
+//	}
+	@Test(priority=5, groups="Companies")
+	public void companies() throws InterruptedException {
 		homePg = new HomePage(driver);
-		homePg.search(applyForRole);
-		Thread.sleep(4000);
-		srchRsltPg = new SearchResultPage(driver);
-		srchRsltPg.filterResults();
-		srchRsltPg.apply("Tester");
+		homePg.goToCompanies();
+		companiesPg = new CompaniesPage(driver);
+		companiesPg.findMNCs();
 	}
+	@Test(priority=6, groups="Logout")
+	public void logout() throws InterruptedException {
+		homePg = new HomePage(driver);
+		homePg.logout();
+	}
+	
+	
 	
 	@Test(priority = 0)
 	public void temp() throws InterruptedException {
