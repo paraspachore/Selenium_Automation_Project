@@ -23,7 +23,7 @@ public class HomePage {
 	By JobsTabBy = By.xpath("//a[@class='nI-gNb-menuItems__anchorDropdown'and@title='Recommended Jobs']");
 	By savedJobsBy = By.xpath("//a[@href='/mnjuser/savedjobs']");///html/body/div[3]/div[2]/nav/ul/li[1]/div/ul/li[5]/a
 	By CompaniesTabBy = By.xpath("//a[@class='nI-gNb-menuItems__anchorDropdown'and@title='Explore top companies hiring on Naukri']");
-	By logoutBy = By.xpath("/html/body/div[3]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div/div[1]/div[4]/a");
+	By logoutBy = By.xpath("//a[contains(text(),'Logout')]");//a[contains(text(),'Logout')]
 	
 //	WebElement profileDrawer = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/div"));
 //	WebElement viewProfileBtn = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[2]/a"));

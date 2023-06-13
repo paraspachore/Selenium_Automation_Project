@@ -86,7 +86,6 @@ public class SearchResultPage {
 		List<WebElement> jobTitles = driver.findElements(JobTitleBy);
 		for(int i=0; i<3; i++) {
 				applyForIt(jobTitles.get(i));
-				Thread.sleep(3000);
 		}
 		
 		
@@ -111,7 +110,7 @@ public class SearchResultPage {
 	}
 	
 	void applyForIt(WebElement jobTitle) throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(2500);
 		String mainWindowHandle = driver.getWindowHandle();
 		jobTitle.click();
 		Thread.sleep(3000);
@@ -119,7 +118,7 @@ public class SearchResultPage {
 		JobDescPg.saveJob(mainWindowHandle);
 		Thread.sleep(3000);
 		driver.switchTo().window(mainWindowHandle);
-		Thread.sleep(3000);
+		Thread.sleep(2500);
 	}
 	
 	
