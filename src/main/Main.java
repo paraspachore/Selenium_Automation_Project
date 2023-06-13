@@ -14,7 +14,6 @@ import pages.SearchResultPage;
 
 public class Main {
 	WebDriver driver;
-//	String baseUrl = "https://www.naukri.com/nlogin/login";//"https://www.naukri.com";
 	String baseUrl = "https://www.naukri.com";
 	
 	
@@ -36,8 +35,8 @@ public class Main {
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(5000);
-//		driver.close();
-//		driver.quit();
+		driver.close();
+		driver.quit();
 	}
 
 	@BeforeTest
@@ -72,35 +71,36 @@ public class Main {
 //		profilePg = new ProfilePage(driver);
 //		profilePg.updateEmployment();
 //	}
-	
-//	@Test(priority=3, groups="searching")
-//	public void searchRun() throws InterruptedException {
-//		String applyForRole = "Automation Test";
-//		homePg = new HomePage(driver);
-//		homePg.search(applyForRole);
-//		Thread.sleep(4000);
-//		srchRsltPg = new SearchResultPage(driver);
-//		srchRsltPg.filterResults();
-//		srchRsltPg.apply("Tester");
-//	}
+
+	@Test(priority=3, groups="searching")
+	public void searchRun() throws InterruptedException {
+		String applyForRole = "Automation Testing, QA, Tester";
+		homePg = new HomePage(driver);
+		homePg.search(applyForRole);
+		Thread.sleep(4000);
+		srchRsltPg = new SearchResultPage(driver);
+		srchRsltPg.filterResults();
+		srchRsltPg.apply();
+	}
 	
 //	@Test(priority=4, groups="savedjobs")
 //	public void savedJobs() throws InterruptedException {
 //		homePg = new HomePage(driver);
 //		homePg.goToSavedJobs();
 //	}
-	@Test(priority=5, groups="Companies")
-	public void companies() throws InterruptedException {
-		homePg = new HomePage(driver);
-		homePg.goToCompanies();
-		companiesPg = new CompaniesPage(driver);
-		companiesPg.findMNCs();
-	}
-	@Test(priority=6, groups="Logout")
-	public void logout() throws InterruptedException {
-		homePg = new HomePage(driver);
-		homePg.logout();
-	}
+//	
+//	@Test(priority=5, groups="Companies")
+//	public void companies() throws InterruptedException {
+//		homePg = new HomePage(driver);
+//		homePg.goToCompanies();
+//		companiesPg = new CompaniesPage(driver);
+//		companiesPg.findMNCs();
+//	}
+//	@Test(priority=6, groups="Logout")
+//	public void logout() throws InterruptedException {
+//		homePg = new HomePage(driver);
+//		homePg.logout();
+//	}
 	
 	
 	
@@ -110,6 +110,5 @@ public class Main {
 		loginPg = new LoginPage(driver);
 		loginPg.LoginActions();
 	}
-	
 	
 }

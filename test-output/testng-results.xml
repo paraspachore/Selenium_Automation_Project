@@ -1,43 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-13T08:30:29 IST" name="Default suite" finished-at="2023-06-13T08:31:24 IST" duration-ms="54787">
+  <suite started-at="2023-06-13T09:45:14 IST" name="Default suite" finished-at="2023-06-13T09:47:37 IST" duration-ms="143879">
     <groups>
-      <group name="Logout">
-        <method signature="Main.logout()[pri:6, instance:main.Main@6631f5ca]" name="logout" class="main.Main"/>
-      </group> <!-- Logout -->
-      <group name="Companies">
-        <method signature="Main.companies()[pri:5, instance:main.Main@6631f5ca]" name="companies" class="main.Main"/>
-      </group> <!-- Companies -->
+      <group name="searching">
+        <method signature="Main.searchRun()[pri:3, instance:main.Main@b62d79]" name="searchRun" class="main.Main"/>
+      </group> <!-- searching -->
     </groups>
-    <test started-at="2023-06-13T08:30:29 IST" name="Default test" finished-at="2023-06-13T08:31:24 IST" duration-ms="54787">
+    <test started-at="2023-06-13T09:45:14 IST" name="Default test" finished-at="2023-06-13T09:47:37 IST" duration-ms="143879">
       <class name="main.Main">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-13T08:30:29 IST" name="beforeTest" finished-at="2023-06-13T08:30:33 IST" duration-ms="4025" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T09:45:14 IST" name="beforeTest" finished-at="2023-06-13T09:45:18 IST" duration-ms="4027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-13T08:30:33 IST" name="setUp" finished-at="2023-06-13T08:30:43 IST" duration-ms="9817" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T09:45:18 IST" name="setUp" finished-at="2023-06-13T09:45:28 IST" duration-ms="9899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="temp()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-13T08:30:43 IST" name="temp" finished-at="2023-06-13T08:30:50 IST" duration-ms="7772" status="PASS">
+        <test-method signature="temp()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T09:45:28 IST" name="temp" finished-at="2023-06-13T09:45:35 IST" duration-ms="7891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- temp -->
-        <test-method signature="companies()[pri:5, instance:main.Main@6631f5ca]" started-at="2023-06-13T08:30:51 IST" name="companies" finished-at="2023-06-13T08:31:07 IST" duration-ms="16727" status="PASS">
+        <test-method signature="searchRun()[pri:3, instance:main.Main@b62d79]" started-at="2023-06-13T09:45:35 IST" name="searchRun" finished-at="2023-06-13T09:47:27 IST" duration-ms="112035" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- companies -->
-        <test-method signature="logout()[pri:6, instance:main.Main@6631f5ca]" started-at="2023-06-13T08:31:07 IST" name="logout" finished-at="2023-06-13T08:31:15 IST" duration-ms="7309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-13T08:31:15 IST" name="tearDown" finished-at="2023-06-13T08:31:20 IST" duration-ms="5024" status="PASS">
+        </test-method> <!-- searchRun -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T09:47:27 IST" name="tearDown" finished-at="2023-06-13T09:47:33 IST" duration-ms="5932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:main.Main@6631f5ca]" started-at="2023-06-13T08:31:20 IST" name="afterTest" finished-at="2023-06-13T08:31:24 IST" duration-ms="4014" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T09:47:33 IST" name="afterTest" finished-at="2023-06-13T09:47:37 IST" duration-ms="4011" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

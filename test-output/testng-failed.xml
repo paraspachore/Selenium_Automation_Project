@@ -7,10 +7,9 @@
         <methods>
           <include name="beforeTest"/>
           <include name="setUp"/>
+          <include name="searchRun"/>
           <include name="tearDown"/>
-          <include name="companies"/>
           <include name="afterTest"/>
-          <include name="logout"/>
         </methods>
       </class> <!-- main.Main -->
     </classes>
