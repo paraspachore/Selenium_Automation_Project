@@ -1,103 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-13T10:04:48 IST" name="Default suite" finished-at="2023-06-13T10:05:21 IST" duration-ms="33504">
+  <suite started-at="2023-06-13T10:12:54 IST" name="Default suite" finished-at="2023-06-13T10:16:46 IST" duration-ms="231947">
     <groups>
+      <group name="savedjobs">
+        <method signature="Main.savedJobs()[pri:4, instance:main.Main@4e096385]" name="savedJobs" class="main.Main"/>
+      </group> <!-- savedjobs -->
+      <group name="searching">
+        <method signature="Main.searchRun()[pri:3, instance:main.Main@4e096385]" name="searchRun" class="main.Main"/>
+      </group> <!-- searching -->
+      <group name="profile">
+        <method signature="Main.profileRun()[pri:2, instance:main.Main@4e096385]" name="profileRun" class="main.Main"/>
+      </group> <!-- profile -->
       <group name="Logout">
-        <method signature="Main.logout()[pri:6, instance:main.Main@b62d79]" name="logout" class="main.Main"/>
+        <method signature="Main.logout()[pri:6, instance:main.Main@4e096385]" name="logout" class="main.Main"/>
       </group> <!-- Logout -->
+      <group name="Companies">
+        <method signature="Main.companies()[pri:5, instance:main.Main@4e096385]" name="companies" class="main.Main"/>
+      </group> <!-- Companies -->
+      <group name="registration">
+        <method signature="Main.registrationRun()[pri:0, instance:main.Main@4e096385]" name="registrationRun" class="main.Main"/>
+      </group> <!-- registration -->
+      <group name="login">
+        <method signature="Main.loginRun()[pri:1, instance:main.Main@4e096385]" name="loginRun" class="main.Main"/>
+      </group> <!-- login -->
     </groups>
-    <test started-at="2023-06-13T10:04:48 IST" name="Default test" finished-at="2023-06-13T10:05:21 IST" duration-ms="33504">
+    <test started-at="2023-06-13T10:12:54 IST" name="Default test" finished-at="2023-06-13T10:16:46 IST" duration-ms="231947">
       <class name="main.Main">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T10:04:48 IST" name="beforeTest" finished-at="2023-06-13T10:04:52 IST" duration-ms="4025" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:main.Main@4e096385]" started-at="2023-06-13T10:12:54 IST" name="beforeTest" finished-at="2023-06-13T10:12:58 IST" duration-ms="4017" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T10:04:52 IST" name="setUp" finished-at="2023-06-13T10:05:01 IST" duration-ms="9276" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:main.Main@4e096385]" started-at="2023-06-13T10:12:59 IST" name="setUp" finished-at="2023-06-13T10:13:08 IST" duration-ms="9242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="temp()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T10:05:01 IST" name="temp" finished-at="2023-06-13T10:05:09 IST" duration-ms="7637" status="PASS">
+        <test-method signature="registrationRun()[pri:0, instance:main.Main@4e096385]" started-at="2023-06-13T10:13:08 IST" name="registrationRun" finished-at="2023-06-13T10:13:33 IST" duration-ms="25088" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- temp -->
-        <test-method signature="logout()[pri:6, instance:main.Main@b62d79]" started-at="2023-06-13T10:05:09 IST" name="logout" finished-at="2023-06-13T10:05:16 IST" duration-ms="7385" status="PASS">
+        </test-method> <!-- registrationRun -->
+        <test-method signature="loginRun()[pri:1, instance:main.Main@4e096385]" started-at="2023-06-13T10:13:33 IST" name="loginRun" finished-at="2023-06-13T10:13:41 IST" duration-ms="7915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginRun -->
+        <test-method signature="profileRun()[pri:2, instance:main.Main@4e096385]" started-at="2023-06-13T10:13:41 IST" name="profileRun" finished-at="2023-06-13T10:14:19 IST" duration-ms="38253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- profileRun -->
+        <test-method signature="searchRun()[pri:3, instance:main.Main@4e096385]" started-at="2023-06-13T10:14:19 IST" name="searchRun" finished-at="2023-06-13T10:15:59 IST" duration-ms="99875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchRun -->
+        <test-method signature="savedJobs()[pri:4, instance:main.Main@4e096385]" started-at="2023-06-13T10:15:59 IST" name="savedJobs" finished-at="2023-06-13T10:16:13 IST" duration-ms="13650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- savedJobs -->
+        <test-method signature="companies()[pri:5, instance:main.Main@4e096385]" started-at="2023-06-13T10:16:13 IST" name="companies" finished-at="2023-06-13T10:16:29 IST" duration-ms="16593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- companies -->
+        <test-method signature="logout()[pri:6, instance:main.Main@4e096385]" started-at="2023-06-13T10:16:29 IST" name="logout" finished-at="2023-06-13T10:16:37 IST" duration-ms="7309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T10:05:16 IST" name="tearDown" finished-at="2023-06-13T10:05:21 IST" duration-ms="5041" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
-Build info: version: '4.9.0', revision: 'd7057100a6'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9cb85520e1436324ced79c51fa449f3d, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\PARASP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51665}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51665/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9cb85520e1436324ced79c51fa449f3d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
-Build info: version: '4.9.0', revision: 'd7057100a6'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9cb85520e1436324ced79c51fa449f3d, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\PARASP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51665}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51665/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9cb85520e1436324ced79c51fa449f3d
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:419)
-at main.Main.tearDown(Main.java:38)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:main.Main@4e096385]" started-at="2023-06-13T10:16:37 IST" name="tearDown" finished-at="2023-06-13T10:16:42 IST" duration-ms="5863" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:main.Main@b62d79]" started-at="2023-06-13T10:05:21 IST" name="afterTest" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1686630921811" status="SKIP">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:main.Main@4e096385]" started-at="2023-06-13T10:16:42 IST" name="afterTest" finished-at="2023-06-13T10:16:46 IST" duration-ms="4015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

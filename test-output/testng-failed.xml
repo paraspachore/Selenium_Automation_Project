@@ -8,13 +8,10 @@
           <include name="beforeTest"/>
           <include name="setUp"/>
           <include name="searchRun"/>
-          <include name="registrationRun"/>
           <include name="tearDown"/>
           <include name="companies"/>
-          <include name="profileRun"/>
           <include name="savedJobs"/>
           <include name="afterTest"/>
-          <include name="loginRun"/>
           <include name="logout"/>
         </methods>
       </class> <!-- main.Main -->

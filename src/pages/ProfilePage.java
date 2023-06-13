@@ -42,7 +42,8 @@ public class ProfilePage {
 //			System.out.println("ChatBot not displayed");
 //		}
 		Thread.sleep(1500);
-		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(EmpSection));
+//		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(EmpSection));
+		js.executeScript("window.scrollBy(0,800)");
 		Thread.sleep(2000);
 		driver.findElement(editEmp).click();
 		Thread.sleep(2000);
