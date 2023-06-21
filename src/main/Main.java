@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -15,6 +17,10 @@ import pages.SearchResultPage;
 public class Main {
 	WebDriver driver;
 	String baseUrl = "https://www.naukri.com";
+	String username = "";
+	String password = "";
+	
+	Scanner sc = new Scanner(System.in);
 	
 	
 	LandingPage landingPg;
@@ -27,6 +33,21 @@ public class Main {
 
 	@BeforeClass
 	public void setUp() {
+		boolean loop = true;
+		if(username==""||password=="") {
+			while(loop) {
+				System.out.print("\nEnter Username/email for naukri profile: ");
+				username = sc.nextLine();
+				System.out.print("\nEnter password: ");
+				password = sc.nextLine();
+				System.out.print("\nProceed Y/N?: ");
+				char c = sc.next().charAt(0);
+				sc.nextLine();
+				if(c=='Y'||c=='y') {
+					loop=false;
+				}
+			}
+		}
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(baseUrl);
@@ -60,7 +81,7 @@ public class Main {
 	public void loginRun() throws InterruptedException {
 		regPg = new RegistrationPage(driver);
 		regPg.clickOnLogin();
-		loginPg = new LoginPage(driver);
+		loginPg = new LoginPage(driver, username, password);
 		loginPg.LoginActions();
 	}
 	

@@ -16,7 +16,7 @@ public class ProfilePage {
 		js = (JavascriptExecutor) driver;
 	}
 	
-//	By chatBotBy = By.xpath("//*[@id=\"_15sb4wxs0Drawer\"]/div[1]");
+	By chatBotBy = By.xpath("//*[@class='crossIcon chatBot chatBot-ic-cross']");
 	By EmpSection = By.xpath("//*[@id=\"lazyEmployment\"]/div");
 	By editEmp = By.xpath("//*[@id=\"lazyEmployment\"]/div/div[1]/div/div[2]/div/div[1]/span[2]");
 	By currEmpRadio = By.xpath("//*[@id=\"employmentForm\"]/div[2]/div[3]/label");
@@ -29,7 +29,7 @@ public class ProfilePage {
 	public void updateEmployment() throws InterruptedException {
 		Thread.sleep(5000);
 		try {
-		    WebElement element = driver.findElement(By.xpath("//*[@id='_15sb4wxs0Navbar']/div"));
+		    WebElement element = driver.findElement(chatBotBy);
 		    element.click();
 		} catch (NoSuchElementException e) {
 		    System.out.println("Element not found or not visible");
@@ -37,7 +37,7 @@ public class ProfilePage {
 		
 //		WebElement chatBot = driver.findElement(chatBotBy);
 //		if(chatBot.isDisplayed()) {
-//			driver.findElement(By.xpath("//*[@id=\"_15sb4wxs0Navbar\"]/div")).click();
+//			driver.findElement(By.xpath("//*[@class='crossIcon chatBot chatBot-ic-cross']")).click();
 //		} else {
 //			System.out.println("ChatBot not displayed");
 //		}

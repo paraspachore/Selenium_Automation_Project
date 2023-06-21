@@ -122,17 +122,6 @@ public class SearchResultPage {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 //	public void apply(String desiredJob) throws InterruptedException {
 //	for(int i=1; i<=20; i++) {
 //		driver.findElement(By.xpath("//*[@id=\"root\"]/div[4]/div/div/section[2]/div[2]/article["+i+"]/div[1]/div[1]/a")).click();
