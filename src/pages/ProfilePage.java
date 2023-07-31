@@ -34,13 +34,6 @@ public class ProfilePage {
 		} catch (NoSuchElementException e) {
 		    System.out.println("Element not found or not visible");
 		}
-		
-//		WebElement chatBot = driver.findElement(chatBotBy);
-//		if(chatBot.isDisplayed()) {
-//			driver.findElement(By.xpath("//*[@class='crossIcon chatBot chatBot-ic-cross']")).click();
-//		} else {
-//			System.out.println("ChatBot not displayed");
-//		}
 		Thread.sleep(1500);
 //		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(EmpSection));
 		js.executeScript("window.scrollBy(0,800)");
